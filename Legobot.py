@@ -5,6 +5,7 @@ from Legobot.Lego import Lego
 from Legobot.Legos.IRCConnector import IRCConnector
 from Legobot.Legos.Help import Help
 from Legobot.Legos.Msync import Audit
+from Legobot.Legos.Shia import DoIt
 
 # Initialize logging
 # create logger with 'spam_application'
@@ -27,4 +28,5 @@ baseplate_proxy = baseplate.proxy()
 # Add children
 baseplate_proxy.add_child(Audit)
 baseplate_proxy.add_child(Help)
+baseplate_proxy.add_child(DoIt)
 baseplate_proxy.add_child(IRCConnector, channel='#voxpupuli', nickname='TheVoxFox', server='chat.freenode.net', port=6697, use_ssl=True, username=None, password=None)
